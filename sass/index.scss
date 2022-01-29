@@ -1,0 +1,83 @@
+$white: #eeeeee;
+$gray1: #333333;
+$gray2: #3F3F3F;
+$mediumgray: #999999;
+$lightgray: #E0E0E0;
+$blue: #3D5AFE;
+
+
+*{
+    font-family: sans-serif;
+}
+
+
+body{
+    color: $gray1;
+    background-color: $white;
+}
+
+.cards{
+
+    display: flex;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
+}
+
+.buttonCard{
+    margin: 0px 32px;
+    position: relative;
+    
+}
+
+button{
+    background-color: $lightgray;
+    border-style: none;
+    border-radius: 6px;
+    padding: 0px 32px;
+    color: $gray2;
+box-shadow: 0px 2px 3px 0px #33333333;
+
+}
+
+button:hover, button:focus{
+    background-color: #AEAEAE
+
+}
+
+
+.Btnoutline{
+    border-color: $blue;
+    border-style:solid; 
+    color: $blue;
+    background-color: $white;
+}
+
+.Btnoutline:hover, .Btnoutline:focus{
+
+    background-color: rgba(41, 98, 255, 0.1);
+}
+
+
+.Btntext{
+    border-style:none;
+    color: $blue;
+    background-color: transparent;
+}
+
+.Btntext:hover, .Btntext:focus{
+    border-style:none;
+    color: $blue;
+    background-color: rgba($color: $blue, $alpha: 0.15);
+}
+
+
+.disableShadow, .disableShadow:hover, .disableShadow:focus{
+    box-shadow: none;
+    background-color:$blue;
+    color: $white;
+}
