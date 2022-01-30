@@ -10,16 +10,7 @@ body {
 .cards {
   display: flex;
   padding: 1rem;
-}
-@media (min-width: 40rem) {
-  .cards {
-    width: 50%;
-  }
-}
-@media (min-width: 56rem) {
-  .cards {
-    width: 33.3333%;
-  }
+  width: 90vw;
 }
 
 .buttonCard {
