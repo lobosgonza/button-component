@@ -1,80 +1,155 @@
 $white: #eeeeee;
 $gray1: #333333;
-$gray2: #3F3F3F;
+$gray2: #3f3f3f;
 $mediumgray: #999999;
-$lightgray: #E0E0E0;
-$blue: #3D5AFE;
+$lightgray: #e0e0e0;
+$blue: #3d5afe;
 
-
-*{
-    font-family: sans-serif;
+* {
+  font-family: sans-serif;
+}
+p{
+    margin: 6px 0px;
+}
+body {
+  color: $gray1;
+  background-color: $white;
 }
 
-
-body{
-    color: $gray1;
-    background-color: $white;
+.cards {
+  display: flex;
+  padding: 1rem;
+  width: 90vw;
 }
 
-.cards{
-
-    display: flex;
-    padding: 1rem;
-      width: 90vw;
-    
-
+.buttonCard {
+  margin: 0px 32px;
+  position: relative;
 }
 
-.buttonCard{
-    margin: 0px 32px;
-    position: relative;
-    
+button {
+  background-color: $lightgray;
+  border-style: none;
+  border-radius: 6px;
+  padding: 0 32px;
+  color: $gray2;
+  box-shadow: 0px 2px 3px 0px #33333333;
 }
 
-button{
-    background-color: $lightgray;
-    border-style: none;
-    border-radius: 6px;
-    padding: 0px 32px;
-    color: $gray2;
-box-shadow: 0px 2px 3px 0px #33333333;
-
+button:hover,
+button:focus {
+  background-color: #aeaeae;
 }
 
-button:hover, button:focus{
-    background-color: #AEAEAE
-
+.Btnoutline {
+  border-color: $blue;
+  border-style: solid;
+  color: $blue;
+  background-color: $white;
 }
 
-
-.Btnoutline{
-    border-color: $blue;
-    border-style:solid; 
-    color: $blue;
-    background-color: $white;
+.Btnoutline:hover,
+.Btnoutline:focus {
+  background-color: rgba(41, 98, 255, 0.1);
 }
 
-.Btnoutline:hover, .Btnoutline:focus{
-
-    background-color: rgba(41, 98, 255, 0.1);
+.Btntext {
+  border-style: none;
+  color: $blue;
+  background-color: transparent;
 }
 
-
-.Btntext{
-    border-style:none;
-    color: $blue;
-    background-color: transparent;
+.Btntext:hover,
+.Btntext:focus {
+  border-style: none;
+  color: $blue;
+  background-color: rgba($color: $blue, $alpha: 0.15);
 }
 
-.Btntext:hover, .Btntext:focus{
-    border-style:none;
-    color: $blue;
-    background-color: rgba($color: $blue, $alpha: 0.15);
+.disableShadow,
+.disableShadow:hover,
+.disableShadow:focus {
+  box-shadow: none;
+  background-color: $blue;
+  color: $white;
 }
 
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 
-.disableShadow, .disableShadow:hover, .disableShadow:focus{
-    box-shadow: none;
-    background-color:$blue;
-    color: $white;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+//   Sizes Button
+.sm {
+  padding: 0px 16px;
+}
+
+.md {
+  padding: 0px 32px;
+}
+
+.lg {
+  padding: 8px 36px;
+}
+
+//Button Colors
+
+.default {
+  background: #e0e0e0;
+}
+
+.primary {
+  background: #2962FF;
+  color: #ffffff;
+}
+.secondary {
+  background: #455A64;
+  color: #ffffff;
+}
+
+.danger {
+  background: #D32F2F;
+  color: #ffffff;
+}
+
+.default:hover,
+.default:focus {
+  background: #aeaeae;
+}
+
+.primary:hover,
+.primary:focus {
+  background: #0039cb;
+  color: #ffffff;
+}
+.secondary:hover,
+.secondary:focus {
+  background: #1c313a;
+  color: #ffffff;
+}
+
+.danger:hover,
+.danger:focus {
+  background: #9a0007;
+  color: #ffffff;
 }
