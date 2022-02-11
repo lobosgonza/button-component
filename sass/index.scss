@@ -56,6 +56,7 @@ button:focus {
 .Btntext {
   border-style: none;
   color: $blue;
+ 
   background-color: transparent;
 }
 
@@ -70,9 +71,16 @@ button:focus {
 .disableShadow:hover,
 .disableShadow:focus {
   box-shadow: none;
-  background-color: $blue;
-  color: $white;
+  // background-color: $blue;
+  // color: $white;
 }
+
+.disabled, .disabled:hover, .disabled:focus{
+  background: #E0E0E0;
+  color: #9E9E9E;
+  box-shadow: none;
+}
+
 
 .material-icons {
   font-family: "Material Icons";

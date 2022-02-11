@@ -65,8 +65,12 @@ button:focus {
 .disableShadow:hover,
 .disableShadow:focus {
   box-shadow: none;
-  background-color: #3d5afe;
-  color: #eeeeee;
+}
+
+.disabled, .disabled:hover, .disabled:focus {
+  background: #E0E0E0;
+  color: #9E9E9E;
+  box-shadow: none;
 }
 
 .material-icons {

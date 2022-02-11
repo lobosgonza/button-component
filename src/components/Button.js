@@ -20,10 +20,21 @@ const variantClass = props.variant ? "Btn"  + props.variant : " " ;
 
 // Disable Button Config
 
-const disableshadowTitle = props.disableshadow  === "disableShadow" ? "disableShadow": " ";
-const disableshadowClass = props.disableshadow  === "disableShadow" ? "disableShadow": " ";
+var disableshadowTitle = props.disableshadow === "false" ? "disableShadow": " ";
+var disableshadowClass = props.disableshadow === "false" ? "disableShadow": " ";
+
+
+
+// Disable Button
+var disabledTitle = props.disabled === "true" ? "disabled": " ";
+var disabledClass = props.disabled === "true" ? "disabled": " ";
+
+
+
 
 //// Google Icons config
+
+
 
 // icon to the left
 const setStartIconTitle = props.startIcon ? `startIcon ="` + props.startIcon + `"` : "";
@@ -66,8 +77,8 @@ setIndicator(isFocused?"Focused":"Default")
 return (
 <div className="cards">
 <div className="buttonCard">
-<p> {"<Button"} {variantTitle} {disableshadowTitle} {setStartIconTitle} {setEndIconTitle} {sizeTitle} {colorTitle} {" />"} </p>
-<button className={variantClass + " " + disableshadowClass + " " + setSizeClass + " " + setColor}  onMouseOut={mouseOutHandler} onMouseOver={hoverHandler}  onBlur={blurHandler} onFocus={focusHandler} >
+<p> {"<Button"} {variantTitle} {disableshadowTitle} {disabledTitle} {setStartIconTitle} {setEndIconTitle} {sizeTitle} {colorTitle} {" />"} </p>
+<button className={variantClass + " " + disableshadowClass + " " + setSizeClass + " " + setColor  + " " + disabledClass}  onMouseOut={mouseOutHandler} onMouseOver={hoverHandler}  onBlur={blurHandler} onFocus={focusHandler} >
 <p>{setStartIcon} {indicator} {setEndIcon}</p>
 </button>
 
