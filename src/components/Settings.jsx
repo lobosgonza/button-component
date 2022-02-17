@@ -21,6 +21,7 @@ props.disableChange(event.target.value);
 };
 
 function iconHandler(event){
+  console.log ("Icon Value:");
 console.log(event.target.value);
 props.iconChange(event.target.value);
 };
@@ -55,11 +56,11 @@ props.sideChange(event.target.value);
 
 <h2>Icon</h2>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="" > None</button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="local_grocery_store"><span className="material-icons">local_grocery_store</span></button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="favorite_border"><span className="material-icons">favorite_border</span> </button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="done_all"><span className="material-icons">done_all</span></button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="check_circle" ><span className="material-icons">check_circle</span></button>
+  <button type="button" className="btn btn-primary" onClick={iconHandler} value="none" > None</button>
+  <button type="button" className="btn btn-primary" onClick={iconHandler} value="local_grocery_store" > <span className="material-icons">local_grocery_store</span> </button>
+  <button type="button" className="btn btn-primary" onClick={iconHandler} value="favorite_border" > <span className="material-icons">favorite_border</span> </button>
+  <button type="button" className="btn btn-primary" onClick={iconHandler} value="done_all"> <span className="material-icons">done_all</span> </button>
+  <button type="button" className="btn btn-primary" onClick={iconHandler} value="check_circle" > <span className="material-icons">check_circle</span> </button>
 </div>
 
 <h2>Side</h2>

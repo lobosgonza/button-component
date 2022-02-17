@@ -11,6 +11,10 @@ body {
   background-color: #eeeeee;
 }
 
+button span {
+  pointer-events: none;
+}
+
 .cards {
   display: flex;
   padding: 1rem;

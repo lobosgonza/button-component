@@ -35,13 +35,13 @@ var disabledClass = props.disabled === "true" ? "disabled": " ";
 //// Google Icons config
 
 
-
 // icon to the left
-const setStartIconTitle = props.startIcon ? `startIcon ="` + props.startIcon + `"` : "";
-var setStartIcon = <span className="material-icons"> {props.startIcon}</span>;
+var setStartIconTitle = props.startIcon ? `startIcon="` + props.startIcon + `"` : "";
+var setStartIcon = <span className="material-icons">  {props.startIcon} </span>;
+
 
 // icon to the right
-const setEndIconTitle = props.endIcon ? `endIcon ="` + props.endIcon + `"`: "";
+var setEndIconTitle = props.endIcon ? `endIcon="` + props.endIcon + `"`: "";
 var setEndIcon =  <span className="material-icons"> {props.endIcon}</span>;
 
 //Size
