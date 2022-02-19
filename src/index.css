@@ -2,23 +2,21 @@
   font-family: sans-serif;
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
 p {
   margin: 6px 0px;
 }
 
 body {
   color: #333333;
-  background-color: #eeeeee;
+  background-color: #cccccc;
 }
 
 button span {
   pointer-events: none;
-}
-
-.cards {
-  display: flex;
-  padding: 1rem;
-  width: 90vw;
 }
 
 .buttonCard {
@@ -40,26 +38,30 @@ button:focus {
   background-color: #aeaeae;
 }
 
-.Btnoutline {
+.Nav {
+  background-color: #072227;
+  color: #eeeeee;
+}
+
+.outline {
   border-color: #3d5afe;
   border-style: solid;
   color: #3d5afe;
-  background-color: #eeeeee;
 }
 
-.Btnoutline:hover,
-.Btnoutline:focus {
+.outline:hover,
+.outline:focus {
   background-color: rgba(41, 98, 255, 0.1);
 }
 
-.Btntext {
+.text {
   border-style: none;
   color: #3d5afe;
   background-color: transparent;
 }
 
-.Btntext:hover,
-.Btntext:focus {
+.text:hover,
+.text:focus {
   border-style: none;
   color: #3d5afe;
   background-color: rgba(61, 90, 254, 0.15);
@@ -75,6 +77,8 @@ button:focus {
   background: #E0E0E0;
   color: #9E9E9E;
   box-shadow: none;
+  border: none;
+  cursor: not-allowed;
 }
 
 .material-icons {

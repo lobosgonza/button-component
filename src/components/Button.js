@@ -13,21 +13,21 @@ const[isFocused, switchFocused] = useState(false);
    
     
 // Variant Button Config
-const variantTitle = props.variant ? `variant ="` + props.variant + `"`: " " ;
-const variantClass = props.variant ? "Btn"  + props.variant : " " ;
+const variantTitle = props.variant ? `variant ="` + props.variant + `"`: null ;
+const variantClass = props.variant ? props.variant : null ;
 
 
 
 // Disable Button Config
 
-var disableshadowTitle = props.disableshadow === "false" ? "disableShadow": " ";
-var disableshadowClass = props.disableshadow === "false" ? "disableShadow": " ";
+var disableshadowTitle = props.disableshadow === "false" ? "disableShadow ": "";
+var disableshadowClass = props.disableshadow === "false" ? "disableShadow ": "";
 
 
 
 // Disable Button
-var disabledTitle = props.disabled === "true" ? "disabled": " ";
-var disabledClass = props.disabled === "true" ? "disabled": " ";
+var disabledTitle = props.disabled === "true" ? "disabled ": "";
+var disabledClass = props.disabled === "true" ? "disabled ": "";
 
 
 
@@ -36,13 +36,15 @@ var disabledClass = props.disabled === "true" ? "disabled": " ";
 
 
 // icon to the left
-var setStartIconTitle = props.startIcon ? `startIcon="` + props.startIcon + `"` : "";
-var setStartIcon = <span className="material-icons">  {props.startIcon} </span>;
+var setStartIconTitle = !props.startIcon ? "": `startIcon="` + props.startIcon + `"`;
+var setStartIcon = props.startIcon === "none" ? null: <span className="material-icons">  {props.startIcon} </span>;
+// var setStartIcon = <span className="material-icons">  {props.startIcon} </span>;
 
 
 // icon to the right
-var setEndIconTitle = props.endIcon ? `endIcon="` + props.endIcon + `"`: "";
-var setEndIcon =  <span className="material-icons"> {props.endIcon}</span>;
+var setEndIconTitle = !props.endIcon ?"": `endIcon="` + props.endIcon + `"`;
+var setEndIcon = props.endIcon === "none" ? null : <span className="material-icons"> {props.endIcon}</span> ;
+// var setEndIcon = <span className="material-icons"> {props.endIcon}</span>;
 
 //Size
 const sizeTitle = props.size ? `size ="` + props.size + `"` : "";
@@ -75,14 +77,12 @@ setIndicator(isFocused?"Focused":"Default")
 }
 
 return (
-<div className="cards">
-<div className="buttonCard">
+<div>
 <p> {"<Button"} {variantTitle} {disableshadowTitle} {disabledTitle} {setStartIconTitle} {setEndIconTitle} {sizeTitle} {colorTitle} {" />"} </p>
-<button className={variantClass + " " + disableshadowClass + " " + setSizeClass + " " + setColor  + " " + disabledClass}  onMouseOut={mouseOutHandler} onMouseOver={hoverHandler}  onBlur={blurHandler} onFocus={focusHandler} >
-<p>{setStartIcon} {indicator} {setEndIcon}</p>
+<button className={ disableshadowClass + " " + setSizeClass + " " + setColor  + " " + disabledClass + " " + variantClass}  onMouseOut={mouseOutHandler} onMouseOver={hoverHandler}  onBlur={blurHandler} onFocus={focusHandler} >
+<p>{setStartIcon}{indicator}{setEndIcon}</p>
 </button>
 
-</div>
 
 
 </div>

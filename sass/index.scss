@@ -1,30 +1,33 @@
 $white: #eeeeee;
-$gray1: #333333;
+$textColor2: $white;
+$textColor1: #333333;
 $gray2: #3f3f3f;
-$mediumgray: #999999;
 $lightgray: #e0e0e0;
 $blue: #3d5afe;
+$primaryBck:#072227;
+$secondaryBck:#cccccc ;
+
 
 * {
   font-family: sans-serif;
+}
+
+h3{
+font-size: 1.2rem;
+
 }
 p{
     margin: 6px 0px;
 }
 body {
-  color: $gray1;
-  background-color: $white;
+  color: $textColor1;
+  background-color: $secondaryBck;
 }
 
 button span {
   pointer-events: none;
 }
 
-.cards {
-  display: flex;
-  padding: 1rem;
-  width: 90vw;
-}
 
 .buttonCard {
   margin: 0px 32px;
@@ -45,27 +48,30 @@ button:focus {
   background-color: #aeaeae;
 }
 
-.Btnoutline {
+.Nav{
+  background-color: $primaryBck;
+  color: $textColor2;
+}
+.outline {
   border-color: $blue;
   border-style: solid;
   color: $blue;
-  background-color: $white;
+  // background-color: $white;
 }
 
-.Btnoutline:hover,
-.Btnoutline:focus {
+.outline:hover,
+.outline:focus {
   background-color: rgba(41, 98, 255, 0.1);
 }
 
-.Btntext {
+.text {
   border-style: none;
   color: $blue;
- 
   background-color: transparent;
 }
 
-.Btntext:hover,
-.Btntext:focus {
+.text:hover,
+.text:focus {
   border-style: none;
   color: $blue;
   background-color: rgba($color: $blue, $alpha: 0.15);
@@ -83,6 +89,8 @@ button:focus {
   background: #E0E0E0;
   color: #9E9E9E;
   box-shadow: none;
+  border: none;
+  cursor: not-allowed;
 }
 
 
