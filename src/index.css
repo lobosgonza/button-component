@@ -10,18 +10,24 @@ p {
   margin: 6px 0px;
 }
 
+a, a:hover {
+  color: #eeeeee;
+}
+
 body {
   color: #333333;
   background-color: #cccccc;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.paddingContainer {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 button span {
   pointer-events: none;
-}
-
-.buttonCard {
-  margin: 0px 32px;
-  position: relative;
 }
 
 button {
@@ -38,13 +44,14 @@ button:focus {
   background-color: #aeaeae;
 }
 
-.Nav {
+.navContainer {
   background-color: #072227;
   color: #eeeeee;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .outline {
-  border-color: #3d5afe;
   border-style: solid;
   color: #3d5afe;
 }
@@ -55,9 +62,9 @@ button:focus {
 }
 
 .text {
-  border-style: none;
+  border-style: none !important;
   color: #3d5afe;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .text:hover,
@@ -74,11 +81,11 @@ button:focus {
 }
 
 .disabled, .disabled:hover, .disabled:focus {
-  background: #E0E0E0;
-  color: #9E9E9E;
-  box-shadow: none;
-  border: none;
-  cursor: not-allowed;
+  background: #E0E0E0 !important;
+  color: #9E9E9E !important;
+  box-shadow: none !important;
+  border: none !important;
+  cursor: not-allowed !important;
 }
 
 .material-icons {
@@ -109,7 +116,7 @@ button:focus {
 }
 
 .md {
-  padding: 0px 32px;
+  padding: 4px 32px;
 }
 
 .lg {
@@ -118,21 +125,25 @@ button:focus {
 
 .default {
   background: #e0e0e0;
+  border-color: #2962FF;
 }
 
 .primary {
   background: #2962FF;
   color: #ffffff;
+  border-color: #ffffff;
 }
 
 .secondary {
   background: #455A64;
   color: #ffffff;
+  border-color: #ffffff;
 }
 
 .danger {
   background: #D32F2F;
   color: #ffffff;
+  border-color: #ffffff;
 }
 
 .default:hover,
@@ -156,6 +167,16 @@ button:focus {
 .danger:focus {
   background: #9a0007;
   color: #ffffff;
+}
+
+.footerContainer {
+  background-color: #072227;
+  color: #eeeeee;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 /*# sourceMappingURL=index.css.map */

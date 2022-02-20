@@ -7,6 +7,18 @@ $blue: #3d5afe;
 $primaryBck:#072227;
 $secondaryBck:#cccccc ;
 
+// Background and letters stryle types
+@mixin divWhite {
+  color: $textColor1;
+  background-color: $secondaryBck;
+background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+@mixin divGreen {
+  background-color: $primaryBck;
+  color: $textColor2;
+}
 
 * {
   font-family: sans-serif;
@@ -19,9 +31,17 @@ font-size: 1.2rem;
 p{
     margin: 6px 0px;
 }
+a, a:hover{
+  color:$textColor2
+}
 body {
-  color: $textColor1;
-  background-color: $secondaryBck;
+@include divWhite;
+}
+
+.paddingContainer{
+padding-top: 3vh;
+padding-bottom: 3vh;
+
 }
 
 button span {
@@ -29,10 +49,6 @@ button span {
 }
 
 
-.buttonCard {
-  margin: 0px 32px;
-  position: relative;
-}
 
 button {
   background-color: $lightgray;
@@ -48,12 +64,13 @@ button:focus {
   background-color: #aeaeae;
 }
 
-.Nav{
-  background-color: $primaryBck;
-  color: $textColor2;
+.navContainer{
+@include divGreen;
+padding-top: 1vh;
+padding-bottom: 1vh;
+
 }
 .outline {
-  border-color: $blue;
   border-style: solid;
   color: $blue;
   // background-color: $white;
@@ -65,9 +82,9 @@ button:focus {
 }
 
 .text {
-  border-style: none;
+  border-style: none !important;
   color: $blue;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .text:hover,
@@ -86,11 +103,11 @@ button:focus {
 }
 
 .disabled, .disabled:hover, .disabled:focus{
-  background: #E0E0E0;
-  color: #9E9E9E;
-  box-shadow: none;
-  border: none;
-  cursor: not-allowed;
+  background: #E0E0E0 !important;
+  color: #9E9E9E !important;
+  box-shadow: none !important;
+  border: none !important;
+  cursor: not-allowed !important;
 }
 
 
@@ -122,34 +139,43 @@ button:focus {
 //   Sizes Button
 .sm {
   padding: 0px 16px;
+
 }
 
 .md {
-  padding: 0px 32px;
+  padding: 4px 32px;
+
 }
 
 .lg {
   padding: 8px 36px;
+
 }
 
 //Button Colors
 
 .default {
   background: #e0e0e0;
+  border-color: #2962FF;
 }
 
 .primary {
   background: #2962FF;
   color: #ffffff;
+  border-color: #ffffff;
 }
 .secondary {
   background: #455A64;
   color: #ffffff;
+  border-color: #ffffff;
+
 }
 
 .danger {
   background: #D32F2F;
   color: #ffffff;
+  border-color: #ffffff;
+
 }
 
 .default:hover,
@@ -172,4 +198,15 @@ button:focus {
 .danger:focus {
   background: #9a0007;
   color: #ffffff;
+}
+
+
+.footerContainer{
+
+@include divGreen;
+padding-top: 2vh;
+padding-bottom: 2vh;
+position: absolute;
+bottom: 0;
+width: 100vw;
 }

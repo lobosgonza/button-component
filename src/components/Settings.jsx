@@ -46,54 +46,54 @@ props.btnColorChange(event.target.value);
     <h2>Settings</h2>
 <h3>Variant</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={variantHandler} name="outline">Outline</button>
-  <button type="button" className="btn btn-primary" onClick={variantHandler} name="text">Text</button>
-  <button type="button" className="btn btn-primary" onClick={variantHandler} name="default">None</button>
+  <button type="button" className="btn btn-success" onClick={variantHandler} name="outline">Outline</button>
+  <button type="button" className="btn btn-success" onClick={variantHandler} name="text">Text</button>
+  <button type="button" className="btn btn-success" onClick={variantHandler} name="default">None</button>
 </div>
 
 
 <h3>Box Shadow</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={boxShadowHandler} value={true}  >on</button>
-  <button type="button" className="btn btn-primary" onClick={boxShadowHandler} value={false} >off </button>
+  <button type="button" className="btn btn-success" onClick={boxShadowHandler} value={true}  >on</button>
+  <button type="button" className="btn btn-success" onClick={boxShadowHandler} value={false} >off </button>
 </div>
 
 
 <h3>Disable</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={disableHandler} value={true}>on</button>
-  <button type="button" className="btn btn-primary" onClick={disableHandler} value={false}>off</button>
+  <button type="button" className="btn btn-success" onClick={disableHandler} value={true}>Abled</button>
+  <button type="button" className="btn btn-success" onClick={disableHandler} value={false}>Disabled</button>
 </div>
 
 <h3>Icon</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="none" > None</button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="local_grocery_store" > <span className="material-icons">local_grocery_store</span> </button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="favorite_border" > <span className="material-icons">favorite_border</span> </button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="done_all"> <span className="material-icons">done_all</span> </button>
-  <button type="button" className="btn btn-primary" onClick={iconHandler} value="check_circle" > <span className="material-icons">check_circle</span> </button>
+  <button type="button" className="btn btn-success" onClick={iconHandler} value="none" > None</button>
+  <button type="button" className="btn btn-success" onClick={iconHandler} value="local_grocery_store" > <span className="material-icons">local_grocery_store</span> </button>
+  <button type="button" className="btn btn-success" onClick={iconHandler} value="favorite_border" > <span className="material-icons">favorite_border</span> </button>
+  <button type="button" className="btn btn-success" onClick={iconHandler} value="done_all"> <span className="material-icons">done_all</span> </button>
+  <button type="button" className="btn btn-success" onClick={iconHandler} value="check_circle" > <span className="material-icons">check_circle</span> </button>
 </div>
 
 <h3>Side</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={sideHandler} value="none" > None</button>
-  <button type="button" className="btn btn-primary" onClick={sideHandler} value="left">Left</button>
-  <button type="button" className="btn btn-primary" onClick={sideHandler} value="right">Right </button>
+  <button type="button" className="btn btn-success" onClick={sideHandler} value="none" > None</button>
+  <button type="button" className="btn btn-success" onClick={sideHandler} value="left">Left</button>
+  <button type="button" className="btn btn-success" onClick={sideHandler} value="right">Right </button>
 </div>
 
 <h3>Size</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={sizeHandler} value="sm">Small</button>
-  <button type="button" className="btn btn-primary" onClick={sizeHandler} value="md">Medium</button>
-  <button type="button" className="btn btn-primary" onClick={sizeHandler} value="lg">Large </button>
+  <button type="button" className="btn btn-success" onClick={sizeHandler} value="sm">Small</button>
+  <button type="button" className="btn btn-success" onClick={sizeHandler} value="md">Medium</button>
+  <button type="button" className="btn btn-success" onClick={sizeHandler} value="lg">Large </button>
 </div>
 
 <h3>Color</h3>
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" className="btn btn-primary" onClick={colorHandler} value="default">Default</button>
-  <button type="button" className="btn btn-primary" onClick={colorHandler} value="primary">Primary</button>
-  <button type="button" className="btn btn-primary" onClick={colorHandler} value="secondary">Secondary</button>
-  <button type="button" className="btn btn-primary" onClick={colorHandler} value="danger">Danger</button>
+  <button type="button" className="btn btn-success" onClick={colorHandler} value="default">Default</button>
+  <button type="button" className="btn btn-success" onClick={colorHandler} value="primary">Primary</button>
+  <button type="button" className="btn btn-success" onClick={colorHandler} value="secondary">Secondary</button>
+  <button type="button" className="btn btn-success" onClick={colorHandler} value="danger">Danger</button>
 </div>
 
     </div>

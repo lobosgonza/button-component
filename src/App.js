@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./components/Button";
 import Settings from "./components/Settings";
 import Navigator from "./components/Navigator";
+import Footer from "./components/Footer";
 
 function App() {
   const [variant, setVariant] = useState("");
@@ -26,8 +27,9 @@ function App() {
     rightSide: false,
   });
   
-  // Desactiva botón
+  // Disabled button
   const [isDisabled, setDisabled] = useState(false);
+  
     function handleDisableChange(event) {
       setDisabled(event);
       setIconSide(
@@ -40,14 +42,23 @@ function App() {
     function handlerIconTypeChange(event) {
       console.log("handlerIconTypeChange activated: iconSide.rightSide:" + iconSide.rightSide + " | iconSide.leftSide:" + iconSide.leftSide);
       setIconType(event);
+      
+if (!isDisabled){
       // SYNC THE SIDE BETWEEN THE ICON SLECTED
-      if (iconSide.rightSide === false && iconSide.leftSide === false) {
+      if (iconSide.rightSide === false && iconSide.leftSide === false && isDisabled === true){ 
+        setIconSide({ leftSide: false, rightSide: false });
+      } else if (iconSide.rightSide === false && iconSide.leftSide === false && isDisabled === false) {
         setIconSide({ leftSide: event, rightSide: false});
       } else if (iconSide.rightSide === false) {
         setIconSide({ leftSide: event, rightSide: false });
       } else if (iconSide.leftSide === false) {
         setIconSide({ leftSide: false, rightSide: event });
-      }
+      } 
+    }else{
+ console.log("handlerIconTypeChange blocked")
+    };
+
+
     };
   
       function handlerSideChange(event) {
@@ -79,23 +90,23 @@ function App() {
 
   return (<>
     <Navigator/>
-    <div className="container">
-       <div className="row align-items-start">
- 
 
-        <div className="col-4">
+    <div className="container paddingContainer">
+       <div className="row align-items-start">
+
+        <div className="col-lg-6 paddingContainer">
           <Settings
             variantChange={handleVariantChange}
             boxShadowChange={handlerBoxShadowChange}
             disableChange={handleDisableChange}
-            iconChange={isDisabled === true ? null : handlerIconTypeChange}
+            iconChange={handlerIconTypeChange}
             sideChange={handlerSideChange}
             sizeChange={handlerSizeChange}
             btnColorChange={handlerBtnColorChange}
           />
         </div>
 
-        <div className="col-8 align-self-center text-center">
+        <div className="col-lg-6 align-self-center text-center paddingContainer">
           <Button
             variant={variant}
             startIcon={iconSide.leftSide}
@@ -104,11 +115,14 @@ function App() {
             disabled={isDisabled}
             size={btnSize}
             color={btnColor}
+            
           />
         </div>
 
       </div>
+
     </div>
+      <Footer/>
   </>
   );
 }
