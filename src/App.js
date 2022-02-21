@@ -94,7 +94,7 @@ if (!isDisabled){
     <div className="container paddingContainer">
        <div className="row align-items-start">
 
-        <div className="col-lg-6 paddingContainer">
+        <div className="col-lg-4 col-md-4 paddingContainer">
           <Settings
             variantChange={handleVariantChange}
             boxShadowChange={handlerBoxShadowChange}
@@ -106,7 +106,7 @@ if (!isDisabled){
           />
         </div>
 
-        <div className="col-lg-6 align-self-center text-center paddingContainer">
+        <div className="col-lg-8 col-md-8 align-self-center text-center paddingContainer">
           <Button
             variant={variant}
             startIcon={iconSide.leftSide}
